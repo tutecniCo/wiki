@@ -15,6 +15,7 @@
 		<link href="/plugins/vakata-jstree/dist/themes/default/style.css" rel="stylesheet">
 		<link href="/plugins/atjs/jquery.atwho.min.css" rel="stylesheet">
 		<link href="/plugins/select2/select2.min.css" rel="stylesheet">
+		<link href="//fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
 	</head>
 	<body @if(isset($editWiki) && $editWiki === true) style="overflow: hidden;" @endif>
 		<div class="modal fade" id="team-logo-modal" data-keyboard="false" data-backdrop="static">

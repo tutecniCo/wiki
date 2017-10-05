@@ -7,11 +7,11 @@
 			<div class="row no-container">
 				<div class="col-xs-4 col-sm-4 col-md-4">
 					<div style="padding: 80px 0px;">
-						<h1 style="margin-bottom: 20px; font-size: 38px;">A place where work happens.</h1>
-						<p class="minor-text" style="margin-bottom: 25px; font-size: 18px;">Opus let you document who you are, what you do and how to achieve results.</p>
+						<h1 style="margin-bottom: 20px; font-size: 38px;">El lugar donde nuestros técnicos comparten información.</h1>
+                        <p class="minor-text" style="margin-bottom: 25px; font-size: 16px;">Utilizando <a href="https://github.com/zeeshanu/opus" target="_blank">Opus</a>, la idea es compartir información entre todos los que hacemos <a href="https://tutecni.co" target="_blank" style="font-family: 'Special Elite';"><strong>tutecni.co</strong></a>.</p>
 						<div class="brand-buttons text-center">
-							<a href="{{ route('team.create') }}" class="btn btn-default home-head-btn">Create Team</a>
-							<a href="{{ route('team.login') }}" class="btn btn-default home-head-btn">Login Team</a>
+							{{--<a href="{{ route('team.create') }}" class="btn btn-default home-head-btn">Create Team</a>--}}
+							<a href="{{ route('team.login') }}" class="btn btn-default home-head-btn">Login</a>
 						</div>	
 					</div>
 				</div>
@@ -26,8 +26,8 @@
 			<div class="row no-container" style="width: 1130px; margin: auto;">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="text-center" style="margin-bottom: 55px; margin-top: 30px;">
-						<h1 style="font-size: 34px; margin-bottom: 12px;">Features</h1>
-						<p style="font-size: 18px; width: 550px; margin: auto; margin-bottom: 40px;">Opus is packed full of innovation, all wrapped up in a beautiful design. This isn't just a nice skin.</p>
+						<h1 style="font-size: 34px; margin-bottom: 12px;">Características</h1>
+                        <p style="font-size: 18px; width: 550px; margin: auto; margin-bottom: 40px;">Opus es creado pensando en la innovación, todo envuelto en un hermoso diseño. Esto no es sólo una piel bonita.</p>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-bottom: 45px;">
@@ -36,9 +36,9 @@
 							<img src="img/icons/software_layout_header_sideleft.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Elegant UI</h4>
+							<h4 class="media-heading">UI Elegante</h4>
 							<p>
-								We have thought carefully about design so you don’t have to. You need only focus on your content, we make it look amazing
+                                Hemos pensado cuidadosamente sobre el diseño para que tu no tengas que hacerlo. Sólo necesitas concentrarte en su contenido.
 							</p>
 						</div>
 					</div>
@@ -49,9 +49,9 @@
 							<img src="img/icons/basic_smartphone.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Touch-Optimized</h4>
+							<h4 class="media-heading">Optimizado para mobile</h4>
 							<p>
-								Opus looks stunning on desktop, tablet or phone. Our fully responsive design adjusts perfectly to fit all your devices.
+                                Opus se ve impresionante en el desktop, tablets o teléfonos. Nuestro diseño totalmente adaptable ajusta perfectamente para caber todos sus dispositivos.
 							</p>
 						</div>
 					</div>
@@ -62,9 +62,9 @@
 							<img src="img/icons/basic_bolt.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Fast</h4>
+							<h4 class="media-heading">Rápido</h4>
 							<p>
-								Careful optimization of the user experience and fast performance means a low barrier for content creation and editing.
+                                Optimizado cuidadosamente de la interface de usuario, y rendimiento adecuado significan una barrera baja para la creación y edición de contenido.
 							</p>
 						</div>
 					</div>
@@ -75,9 +75,9 @@
 							<img src="img/icons/basic_info.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Notifications</h4>
+							<h4 class="media-heading">Notificaciones</h4>
 							<p>
-								Instantly received notigication when some one mention you in comment. Opus has first-class notifications out of the box.
+                                Recibe notificaciones al instante cuando alguien te menciona en algún comentario.
 							</p>
 						</div>
 					</div>
@@ -88,9 +88,9 @@
 							<img src="img/icons/ecommerce_sales.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Tags</h4>
+							<h4 class="media-heading">Etiquetas</h4>
 							<p>
-								Tags gives you freedom to define your own structure. You can assign tags to wiki and pages.
+                                Las etiequetas (tags) le dan libertad para definir su propia estructura. Puedes asignar etiquetas a wiki y páginas.
 							</p>
 						</div>
 					</div>
@@ -101,9 +101,9 @@
 							<img src="img/icons/basic_message_multiple.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Instant Replies</h4>
+							<h4 class="media-heading">Respuestas instantáneas</h4>
 							<p>
-								Mention users and reply to pages to make the discussion flow. Linear discussion just got an added dimension.
+                                Mencione a otros usuarios y responda a las páginas para mantener que el flujo en la discusión.
 							</p>
 						</div>
 					</div>
@@ -114,9 +114,9 @@
 							<img src="img/icons/basic_key.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Powerful Permissions</h4>
-							<p>	
-								Take control of your wikis with fine-grained permissions. Assign permissions to role for extra flexibility.
+							<h4 class="media-heading">Gestion de permisos</h4>
+							<p>
+                                Toma el control de tus wikis con permisos a distintos niveles. Asigna permisos a un rol determinado para lograr una flexibilidad adicional.
 							</p>
 						</div>
 					</div>
@@ -127,9 +127,9 @@
 							<img src="img/icons/basic_clockwise.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Real-Time Activity</h4>
+							<h4 class="media-heading">Actividad en tiempo real</h4>
 							<p>
-								Every activity of a user in team is stored so you can check what a person did, where and when. 
+                                Cada actividad de un usuario en el equipo se almacena en la base de datos, para tener un registro preciso.
 							</p>
 						</div>
 					</div>
@@ -140,9 +140,9 @@
 							<img src="img/icons/basic_lock.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Moderation Tools</h4>
+							<h4 class="media-heading">Herramientas de Moderación</h4>
 							<p>
-								Make shortcuts of important pages in wiki. Insert pages in read list and also start watching a wiki.
+                                Crea accesos directos de páginas importantes en la wiki. Agrega páginas en tu lista de lectura y mucho más.
 							</p>
 						</div>
 					</div>
@@ -153,73 +153,12 @@
 							<img src="img/icons/software_font_smallcaps.svg" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Powerful Formatting</h4>
+							<h4 class="media-heading">Formatea tus wikis</h4>
 							<p>
-								Manipulate the layout of a page directly, write html and Emoji are supported out of the box, with a live preview.
+                                Manipula el diseño de tu página como prefieras, html y emojis son compatibles, con una vista previa.
 							</p>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div id="about-us" style="color: white; background: #4780c1; padding: 60px 0;">
-			<div class="row no-container text-center" style="width: 1130px; margin: auto;">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="text-center" style="margin-bottom: 30px;">
-						<h1 style="font-size: 28px; color: #fff; margin-bottom: 7px;">About Us</h1>
-						<p style="font-size: 18px; width: 695px; margin: auto; margin-bottom: 40px;">
-							We're a couple of passionate software developers.
-						</p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<ul class="list-unstyled list-inline">
-						<li style="padding-right: 13px; padding-left: 13px;">
-							<img src="/img/zeeshan.jpg" class="img-circle" width="134" height="134" style="margin-bottom: 10px">
-							<div style="margin-bottom: 18px; margin-top: 12px;">
-								<h3 style="font-size: 21px; margin-bottom: 3px;">Zeeshan Ahmed</h3>
-								<p style="margin: 0px;"><a style="color: #fff; text-decoration: none;" href="mailto:ziishaned@gmail.com">ziishaned@gmail.com</a></p>
-							</div>
-							<ul class="list-unstyled list-inline" style="margin-bottom: 0;">
-								<li>
-									<a href="https://github.com/zeeshanu"><i class="fa fa-github" style="color: #fff; font-size: 34px;"></i></a>
-								</li>
-								<li>
-									<a href="https://twitter.com/ziishaned"><i class="fa fa-twitter" style="color: #fff; font-size: 34px;"></i></a>
-								</li>
-							</ul>
-						</li>
-						<li style="padding-right: 13px; padding-left: 13px;">
-							<img src="/img/adnan.jpg" class="img-circle" width="134" height="134" style="margin-bottom: 10px">
-							<div style="margin-bottom: 18px; margin-top: 12px;">
-								<h3 style="font-size: 21px; margin-bottom: 3px;">Adnan Ahmed</h3>
-								<p style="margin-bottom: 8px;"><a style="color: #fff; text-decoration: none;" href="mailto:mahradnan@hotmail.com">mahradnan@hotmail.com</a></p>
-							</div>
-							<ul class="list-unstyled list-inline" style="margin-bottom: 0;">
-								<li>
-									<a href="https://github.com/idnan"><i class="fa fa-github" style="color: #fff; font-size: 34px;"></i></a>
-								</li>
-								<li>
-									<a href="https://twitter.com/idnan_se"><i class="fa fa-twitter" style="color: #fff; font-size: 34px;"></i></a>
-								</li>
-							</ul>
-						</li>
-						<li style="padding-right: 13px; padding-left: 13px;">
-							<img src="/img/kamran.jpg" class="img-circle" width="134" height="134" style="margin-bottom: 10px">
-							<div style="margin-bottom: 18px; margin-top: 12px;">
-								<h3 style="font-size: 21px; margin-bottom: 3px;">Kamran Ahmed</h3>
-								<p style="margin-bottom: 8px;"><a style="color: #fff; text-decoration: none;" href="mailto:kamranahmed.se@gmail.com">kamranahmed.se@gmail.com</a></p>
-							</div>
-							<ul class="list-unstyled list-inline" style="margin-bottom: 0;">
-								<li>
-									<a href="https://github.com/kamranahmedse"><i class="fa fa-github" style="color: #fff; font-size: 34px;"></i></a>
-								</li>
-								<li>
-									<a href="https://twitter.com/kamranahmedse"><i class="fa fa-twitter" style="color: #fff; font-size: 34px;"></i></a>
-								</li>
-							</ul>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -227,12 +166,12 @@
 			<div class="row no-container"  style="width: 1130px; margin: auto;">
 				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 					<ul class="list-unstyled">
-						<li style="font-size: 20px; margin-bottom: 20px; font-weight: 500;">Product</li>
+						<li style="font-size: 20px; margin-bottom: 20px; font-weight: 500;">Producto</li>
 						<li>
-							<a href="#features" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Features</a>
+							<a href="#features" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Características</a>
 						</li>
 						<li>
-							<a href="#about-us" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">About Us</a>
+							<a href="https://tutecni.co" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Acerca de <strong style="font-family: 'Special Elite';">tutecni.co</strong></a>
 						</li>
 					</ul>
 				</div>
@@ -240,20 +179,17 @@
 					<ul class="list-unstyled">
 						<li style="font-size: 20px; margin-bottom: 20px; font-weight: 500;">Social</li>
 						<li>
-							<a href="https://twitter.com/ziishaned" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Twitter</a>
+							<a href="https://github.com/tutecniCo" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Github</a>
 						</li>
 						<li>
-							<a href="https://github.com/zeeshanu/opus" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Github</a>
-						</li>
-						<li>
-							<a href="#" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Contact Us</a>
+							<a href="mailto:wiki@tutecni.co" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Contáctanos</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-4 col-lg-offset-4 text-center">
 					<div>
 						<img src="/img/fotter-logo.png" width="88" style="margin-bottom: 15px;">
-						<p>Copyright © 2015 <a href="mailto:ziishaned@gmail.com" style="color: #fff; text-decoration: none;">Zeeshan Ahmed</a></p>
+						<p>Copyright © 2017 <a href="" style="color: #fff; text-decoration: none;font-family: 'Special Elite';font-size: 18px;">tutecni.co</a></p>
 					</div>
 				</div>
 			</div>
