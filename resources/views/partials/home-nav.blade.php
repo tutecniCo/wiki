@@ -10,7 +10,7 @@
 				<a href="#features">Características</a>
 			</li>
 			<li>
-				<a href="https://github.com/zeeshanu/opus" target="_blank">
+				<a href="https://github.com/tutecniCo/wiki" target="_blank">
 					Github
 				</a>
 			</li>

@@ -15,7 +15,7 @@
                 <form action="{{ route('team.postlogin') }}" method="POST" role="form">
 		            <div class="form-group {{ $errors->has('team_name') ? 'has-error' : '' }}">
                         <label for="team-name" class="control-label">Team Name</label>
-                        <input type="text" name="team_name" class="form-control" id="team-name" autocomplete="on" required>
+                        <input type="text" name="team_name" class="form-control" id="team-name" autocomplete="on" value="tutecni.co" style="font-family: 'Special Elite';" required readonly>
                         @if($errors->has('team_name'))
                             <p class="help-block has-error">{{ $errors->first('team_name') }}</p>
                         @else
@@ -48,7 +48,7 @@
 		            </div>
 		        </form>
 			</div>
-			<p class="text-center" style="font-size: 14px;"><span class="text-muted" style="margin-left: 15px;">Don't have a team?</span> <a href="{{ route('team.create') }}">Create now</a>.</p>
+			{{--<p class="text-center" style="font-size: 14px;"><span class="text-muted" style="margin-left: 15px;">Don't have a team?</span> <a href="{{ route('team.create') }}">Create now</a>.</p>--}}
 		</div>
 	</div>
 @endsection()

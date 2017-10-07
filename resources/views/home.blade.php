@@ -171,7 +171,7 @@
 							<a href="#features" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Características</a>
 						</li>
 						<li>
-							<a href="https://tutecni.co" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Acerca de <strong style="font-family: 'Special Elite';">tutecni.co</strong></a>
+							<a href="https://github.com/tutecniCo/wiki" target="_blank" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Acerca de <strong style="font-family: 'Special Elite';">tutecni.co</strong></a>
 						</li>
 					</ul>
 				</div>
@@ -189,7 +189,7 @@
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-4 col-lg-offset-4 text-center">
 					<div>
 						<img src="/img/fotter-logo.png" width="88" style="margin-bottom: 15px;">
-						<p>Copyright © 2017 <a href="" style="color: #fff; text-decoration: none;font-family: 'Special Elite';font-size: 18px;">tutecni.co</a></p>
+						<p>Copyright © {{ date("Y") }} <a href="" style="color: #fff; text-decoration: none;font-family: 'Special Elite';font-size: 18px;">tutecni.co</a></p>
 					</div>
 				</div>
 			</div>
