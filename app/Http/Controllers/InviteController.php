@@ -70,7 +70,7 @@ class InviteController extends Controller
     public function sendInvitationEmail($invitation, $team)
     {
         Mail::send('mails.invitation', ['invitation' => $invitation, 'team' => $team], function ($message) use ($invitation, $team) {
-            $message->from('wiki@tutecni.co', 'tutecniCo Wiki');
+            $message->from('wiki@tutecnico.email', 'tutecniCo Wiki');
             $message->subject('Invitation request from ' . $team->name . '.');
             $message->to($invitation->email);
         });

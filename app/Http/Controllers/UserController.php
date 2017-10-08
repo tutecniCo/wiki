@@ -344,7 +344,7 @@ class UserController extends Controller
     public function sendResetPasswordEmail($email, $token)
     {
         Mail::send('mails.reset-password', ['email' => $email, 'token' => $token], function ($message) use ($email) {
-            $message->from('wiki@tutecni.co', 'tutecniCo Wiki');
+            $message->from('wiki@tutecnico.email', 'tutecniCo Wiki');
             $message->subject('Reset Password');
             $message->to($email);
         });
