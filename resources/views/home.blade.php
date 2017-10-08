@@ -171,7 +171,7 @@
 							<a href="#features" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Características</a>
 						</li>
 						<li>
-							<a href="https://github.com/tutecniCo/wiki" target="_blank" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Acerca de <strong style="font-family: 'Special Elite';">tutecni.co</strong></a>
+							<a href="https://tutecni.co" target="_blank" style="text-decoration: none; color: #c5dae6; display: block; margin-bottom: 10px; line-height: 140%; font-size: 15px;">Acerca de <strong style="font-family: 'Special Elite';">tutecni.co</strong></a>
 						</li>
 					</ul>
 				</div>
