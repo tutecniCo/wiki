@@ -13,11 +13,13 @@
         "intervention/image": "^2.3",
         "barryvdh/laravel-snappy": "^0.3.3",
         "fenos/notifynder": "4.0",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "winternight/laravel-error-handler": "^1.7"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^6.0",
+        "filp/whoops": "^2.1"
     },
     "autoload": {
         "classmap": [

@@ -179,13 +179,12 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\HelperServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
-        
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Baum\Providers\BaumServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-
         Barryvdh\Snappy\ServiceProvider::class,
         Fenos\Notifynder\NotifynderServiceProvider::class,
+        Winternight\LaravelErrorHandler\ServiceProvider::class,
     ],
 
     /*
