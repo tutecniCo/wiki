@@ -7,6 +7,9 @@
 		</a>
 		<ul class="nav navbar-nav navbar-right home-nav">
 			<li>
+				<a href="{{ route('team.login') }}">Login</a>
+			</li>
+			<li>
 				<a href="#features">Características</a>
 			</li>
 			<li>

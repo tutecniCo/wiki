@@ -10,7 +10,6 @@
 						<h1 style="margin-bottom: 20px; font-size: 38px;">El lugar donde nuestros técnicos comparten información.</h1>
                         <p class="minor-text" style="margin-bottom: 25px; font-size: 16px;">Utilizando <a href="https://github.com/zeeshanu/opus" target="_blank">Opus</a>, la idea es compartir información entre todos los que hacemos <a href="https://tutecni.co" target="_blank" style="font-family: 'Special Elite';"><strong>tutecni.co</strong></a>.</p>
 						<div class="brand-buttons text-center">
-							{{--<a href="{{ route('team.create') }}" class="btn btn-default home-head-btn">Create Team</a>--}}
 							<a href="{{ route('team.login') }}" class="btn btn-default home-head-btn">Login</a>
 						</div>	
 					</div>
