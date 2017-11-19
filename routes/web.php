@@ -87,7 +87,7 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
     });
 
     Route::get('{team_slug}/members', 'TeamController@getMembers')->name('teams.members');
-    Route::delete('{team_slug}/member/{id}', 'UserController@destroyUser')->name('member.destroy');
+    Route::delete('{team_slug}/member/{user_slug}', 'UserController@destroyUser')->name('member.destroy');
 
     Route::delete('{team_slug}/invite/{hash}', 'InviteController@destroy')->name('invite.destroy');
     Route::get('{team_slug}/invite', 'TeamController@inviteUsers')->name('invite.users');

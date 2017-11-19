@@ -18,7 +18,7 @@
                         <div class="form-group">
                             <input type="text" id="team-name" name="team_name" class="form-control" value="{{ $team->name }}" placeholder="Enter team name" required style="width: 295px;">
                         </div>
-                        <button type="submit" class="btn btn-success pull-right">Save</button>
+                        <button type="submit" class="btn btn-success pull-right" @if(!AuthHelper::isAdmin()) disabled @endif>Save</button>
                         <div class="clearfix"></div>
                     </form>
                 </div>
@@ -38,7 +38,7 @@
                                 <div class="form-group">
                                     <label class="btn btn-default upload-btn" style="margin-bottom: 7px;">
                                         Browse file... 
-                                        <input type="file" name="team_logo" id="team_logo" class="hide">
+                                        <input type="file" name="team_logo" id="team_logo" class="hide" @if(!AuthHelper::isAdmin()) disabled @endif>
                                     </label>
                                     <p class="text-muted">The maximum file size allowed is 200KB.</p>
                                     <input type="hidden" id="x" name="x" />
@@ -57,7 +57,7 @@
                     </p>
                     <form action="{{ route('teams.destroy', [ $team->slug ]) }}" method="POST" role="form">
                         {{ method_field('delete') }}
-                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash fa-fw"></i> Yes I understand, delete my account</button>
+                        <button type="submit" class="btn btn-danger" @if(!AuthHelper::isAdmin()) disabled @endif><i class="fa fa-trash fa-fw"></i> Yes I understand, delete my account</button>
                     </form>
                 </div>
 			</div>

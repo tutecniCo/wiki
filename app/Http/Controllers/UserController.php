@@ -239,18 +239,23 @@ class UserController extends Controller
      * Delete the user account.
      *
      * @param \App\Models\Team $team
-     * @param $userId
+     * @param \App\Models\User $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroyUser(Team $team, $userId)
+    public function destroyUser(Team $team, User $user)
     {
         DB::table('user_teams')
             ->select('user_id','team_id')
-            ->where('user_id', $userId)
+            ->where('user_id', $user->id)
             ->where('team_id', $team->id)
             ->delete();
 
-        $this->user->where('id', '=', $userId)->delete();
+        DB::table('invites')
+            ->select('code')
+            ->where('email', $user->email)
+            ->delete();
+
+        $this->user->where('slug', '=', $user->slug)->delete();
 
         return redirect()->back()->with([
             'alert'      => 'The member was successfully deleted.',

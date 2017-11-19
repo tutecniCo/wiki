@@ -16,7 +16,7 @@
                                 <p class="text-muted">You can edit the groups and set there permissions.</p>
                             </div>
                             <div class="pull-right">
-                                <a href="{{ route('roles.create', [ $team->slug ]) }}" class="btn btn-link create-group-btn"><i class="fa fa-plus fa-fw"></i> Create Group</a>
+                                <a href="{{ route('roles.create', [ $team->slug ]) }}" class="btn btn-link create-group-btn" @if(!AuthHelper::isAdmin()) disabled @endif><i class="fa fa-plus fa-fw"></i> Create Group</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -31,10 +31,10 @@
                                         </div>
                                         <div class="pull-right">
                                             <ul class="list-unstyled list-inline">
-                                                <li>
-                                                    <a href="{{ route('roles.edit', [$team->slug, $group->slug]) }}"><i class="fa fa-pencil fa-fw" data-toggle="tooltip" data-placement="top" title="Edit"></i></a>
-                                                </li>
-                                                @if($group->slug !== 'admins') 
+                                                @if(AuthHelper::isAdmin())
+                                                    <li>
+                                                        <a href="{{ route('roles.edit', [$team->slug, $group->slug]) }}"><i class="fa fa-pencil fa-fw" data-toggle="tooltip" data-placement="top" title="Edit"></i></a>
+                                                    </li>
                                                     <li>
                                                         <a href="{{ route('roles.delete', [$team->slug, $group->slug]) }}" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash-o fa-fw" data-toggle="tooltip" data-placement="top" title="Delete"></i></a>
                                                     </li>

@@ -2,13 +2,19 @@
 	<div class="events-list">
 		@foreach($activities as $activity)
 			<div class="media event">
-				<a class="pull-left event-user-image" href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}">
-					@if(!empty($activity->user->profile_image))
-                        <img class="media-object" style="border-radius: 3px;" src="/img/avatars/{{ $activity->user->profile_image }}" width="44" height="44" alt="Image">
-                    @else
-                        <img class="media-object" style="border-radius: 3px;" src="/img/no-image.png" width="44" height="44" alt="Image">
-                    @endif
-                </a>
+				@if(isset($activity->user))
+					<a class="pull-left event-user-image" href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}">
+						@if(!empty($activity->user->profile_image))
+							<img class="media-object" style="border-radius: 3px;" src="/img/avatars/{{ $activity->user->profile_image }}" width="44" height="44" alt="Image">
+						@else
+							<img class="media-object" style="border-radius: 3px;" src="/img/no-image.png" width="44" height="44" alt="Image">
+						@endif
+					</a>
+				@else
+					<a class="pull-left event-user-image" href="#">
+						<img class="media-object" style="border-radius: 3px;" src="/img/no-image.png" width="44" height="44" alt="Image">
+					</a>
+				@endif
 				<div class="media-body">
 					<div class="event-top">
 						<div class="pull-left event-icon">
@@ -62,42 +68,44 @@
 						</div>
 						<div class="pull-left" style="position: relative; top: 2px;">
 							@if($activity->name == 'created_space')
-								<a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> created space <a href="{{ route('spaces.wikis', [$team->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject->name }}</a>.
+								@if(isset($activity->user))
+									<a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> created space <a href="{{ route('spaces.wikis', [$team->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject->name }}</a>.
+								@endif
 							@endif
 							
-                            @if($activity->name == 'deleted_space')
+                            @if($activity->name == 'deleted_space' && isset($activity->user))
 								<a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> deleted space <a href="{{ route('spaces.wikis', [$team->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject->name }}</a>.
                             @endif
 
-                            @if($activity->name == 'updated_space')
+                            @if($activity->name == 'updated_space' && isset($activity->user))
                                 <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> updated space <a href="{{ route('spaces.wikis', [$team->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject->name }}</a>.
                             @endif
 
-                            @if($activity->name == 'created_wiki')
+                            @if($activity->name == 'created_wiki' && isset($activity->user))
                                 <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> created wiki <a href="{{ route('wikis.show', [$team->slug, $activity->subject->space->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject->name }}</a>.
                             @endif
 
-                            @if($activity->name == 'deleted_wiki')
+                            @if($activity->name == 'deleted_wiki' && isset($activity->user))
                                 <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> deleted wiki <a href="{{ route('wikis.show', [$team->slug, $activity->subject->space->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject->name }}</a>.
                             @endif
 
-                            @if($activity->name == 'updated_wiki')
+                            @if($activity->name == 'updated_wiki' && isset($activity->user))
                                 <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> updated wiki <a href="{{ route('wikis.show', [$team->slug, $activity->subject->space->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject->name }}</a>.
                             @endif
 
-                            @if($activity->name == 'created_page')
+                            @if($activity->name == 'created_page' && isset($activity->user))
                                 <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> created page <a href="{{ route('pages.show', [$team->slug, $activity->subject->wiki->space->slug, $activity->subject->wiki->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject->name }}</a> at wiki <a href="{{ route('wikis.show', [$team->slug, $activity->subject->wiki->space->slug, $activity->subject->wiki->slug]) }}" style="color: #337ab7;">{{ $activity->subject->wiki->name }}</a>.
                             @endif
 
-                            @if($activity->name == 'deleted_page')
+                            @if($activity->name == 'deleted_page' && isset($activity->user))
                                 <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> deleted page <a href="{{ route('pages.show', [$team->slug, $activity->subject->wiki->space->slug, $activity->subject->wiki->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject->name }}</a> at wiki <a href="{{ route('wikis.show', [$team->slug, $activity->subject->wiki->space->slug, $activity->subject->wiki->slug]) }}" style="color: #337ab7;">{{ $activity->subject->wiki->name }}</a>.
                             @endif
 
-                            @if($activity->name == 'updated_page')
+                            @if($activity->name == 'updated_page' && isset($activity->user))
                                 <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> updated page <a href="{{ route('pages.show', [$team->slug, $activity->subject->wiki->space->slug, $activity->subject->wiki->slug, $activity->subject->slug]) }}" style="color: #337ab7;">{{ $activity->subject['name'] }}</a> at wiki <a href="{{ route('wikis.show', [$team->slug, $activity->subject->wiki->space->slug, $activity->subject->wiki->slug]) }}" style="color: #337ab7;">{{ $activity->subject->wiki->name }}</a>.
                             @endif
 
-                            @if($activity->name == 'created_comment')
+                            @if($activity->name == 'created_comment' && isset($activity->user))
                                 @if($activity->subject->subject_type === 'App\Models\Wiki')
                                     <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> commented on wiki <a href="{{ route('wikis.show', [$team->slug, $activity->subject->wiki->space->slug, $activity->subject->wiki->slug]) }}" style="color: #337ab7;">{{ $activity->subject->wiki->name }}</a>.
                                 @else
@@ -105,7 +113,7 @@
                                 @endif
                             @endif
 
-                            @if($activity->name == 'deleted_comment')
+                            @if($activity->name == 'deleted_comment' && isset($activity->user))
                                 @if($activity->subject->subject_type === 'App\Models\Wiki')
                                     <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> deleted comment from wiki <a href="{{ route('wikis.show', [$team->slug, $activity->subject->wiki->space->slug, $activity->subject->wiki->slug]) }}" style="color: #337ab7;">{{ $activity->subject->wiki->name }}</a>.
                                 @else
@@ -113,7 +121,7 @@
                                 @endif
                             @endif
 
-                            @if($activity->name == 'updated_comment')
+                            @if($activity->name == 'updated_comment' && isset($activity->user))
                                 @if($activity->subject->subject_type === 'App\Models\Wiki')
                                     <a href="{{ route('users.show', [$team->slug, $activity->user->slug]) }}" style="color: #337ab7;">{{ $activity->user->first_name .' '. $activity->user->last_name }}</a> updated comment on wiki <a href="{{ route('wikis.show', [$team->slug, $activity->subject->wiki->space->slug, $activity->subject->wiki->slug]) }}" style="color: #337ab7;">{{ $activity->subject->wiki->name }}</a>.
                                 @else

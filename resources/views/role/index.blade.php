@@ -31,10 +31,10 @@
                                         </div>
                                         <div class="pull-right">
                                             <ul class="list-unstyled list-inline" style="margin-bottom: 0px;">
-                                                <li>
-                                                    <a href="{{ route('roles.edit', [$team->slug, $role->slug]) }}"><i class="fa fa-pencil fa-fw" data-toggle="tooltip" data-placement="top" title="Edit"></i></a>
-                                                </li>
-                                                @if($role->slug !== 'admins') 
+                                                @if(AuthHelper::isAdmin())
+                                                    <li>
+                                                        <a href="{{ route('roles.edit', [$team->slug, $role->slug]) }}"><i class="fa fa-pencil fa-fw" data-toggle="tooltip" data-placement="top" title="Edit"></i></a>
+                                                    </li>
                                                     <li>
                                                         <a href="{{ route('roles.delete', [$team->slug, $role->slug]) }}" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash-o fa-fw" data-toggle="tooltip" data-placement="top" title="Delete"></i></a>
                                                     </li>

@@ -232,11 +232,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'ViewHelper' => App\Helpers\ViewHelper::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Emoji' => App\Helpers\EmojiHelper::class,
         'Pdf' => Barryvdh\Snappy\Facades\SnappyPdf::class,
         'Notifynder' => Fenos\Notifynder\Facades\Notifynder::class,
+        'AuthHelper' => App\Helpers\AuthHelper::class
     ],
 
 ];

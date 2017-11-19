@@ -24,7 +24,7 @@
                                 <option value="{{ $role->slug }}">{{ $role->name }}</option>
                             @endforeach
                         </select>
-                        <button type="submit" class="btn btn-success pull-right">Invite</button>
+                        <button type="submit" class="btn btn-success pull-right" @if(!AuthHelper::isAdmin()) disabled @endif>Invite</button>
                     </form>
                 </div>
                 <div class="row no-container vdivide">
@@ -50,9 +50,9 @@
                                                     <i class="fa fa-envelope-o fa-fw"></i> {{ $member->email }}
                                                 </div>
                                             </div>
-                                            @if(Auth::user()->id != $member->id)
+                                            @if(Auth::user()->id != $member->id && AuthHelper::isAdmin())
                                                 <div style="color: #c1c1c1;margin-top: 10px;margin-left: 88%;">
-                                                    <object><a href="{{ route('member.destroy', [$team->slug, $member->id]) }}" data-method="delete" data-confirm="Are you sure?" id="remove-member" data-toggle="tooltip" data-placement="top" title="Remove Member"><i class="fa fa-trash-o fa-fw"></i></a></object>
+                                                    <object><a href="{{ route('member.destroy', [$team->slug, $member->slug]) }}" data-method="delete" data-confirm="Are you sure?" id="remove-member" data-toggle="tooltip" data-placement="top" title="Remove Member"><i class="fa fa-trash-o fa-fw"></i></a></object>
                                                 </div>
                                             @endif
                                         </div>
