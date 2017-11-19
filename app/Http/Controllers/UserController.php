@@ -219,7 +219,7 @@ class UserController extends Controller
     }
 
     /**
-     * Delete the user account.
+     * Delete the current user account.
      *
      * @param \App\Models\Team $team
      * @param \App\Models\User $user
@@ -231,6 +231,29 @@ class UserController extends Controller
 
         return $this->logout()->with([
             'alert'      => 'Your account successfully deleted.',
+            'alert_type' => 'success',
+        ]);
+    }
+
+    /**
+     * Delete the user account.
+     *
+     * @param \App\Models\Team $team
+     * @param $userId
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroyUser(Team $team, $userId)
+    {
+        DB::table('user_teams')
+            ->select('user_id','team_id')
+            ->where('user_id', $userId)
+            ->where('team_id', $team->id)
+            ->delete();
+
+        $this->user->where('id', '=', $userId)->delete();
+
+        return redirect()->back()->with([
+            'alert'      => 'The member was successfully deleted.',
             'alert_type' => 'success',
         ]);
     }

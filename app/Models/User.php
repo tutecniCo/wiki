@@ -6,6 +6,7 @@ use Auth;
 use Hash;
 use Illuminate\Notifications\Notifiable;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Fenos\Notifynder\Traits\NotifableLaravel53 as NotifableTrait;
 
@@ -17,7 +18,7 @@ use Fenos\Notifynder\Traits\NotifableLaravel53 as NotifableTrait;
  */
 class User extends Authenticatable
 {
-    use Notifiable, Sluggable, NotifableTrait;
+    use Notifiable, Sluggable, NotifableTrait, SoftDeletes;
 
     /**
      * Return the sluggable configuration array for this model.

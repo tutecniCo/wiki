@@ -3,8 +3,11 @@
 Route::get('logout', 'UserController@logout')->name('logout');
 
 Route::group(['middleware' => 'guest'], function () {
+
+//    Disabled -> It will only exist one team: tutecni.co
 //    Route::get('team/create', 'TeamController@create')->name('team.create');
 //    Route::post('team/create', 'TeamController@store')->name('team.store');
+
     Route::get('/', 'HomeController@home')->name('home');
     Route::get('team/login', 'TeamController@login')->name('team.login');
     Route::post('team/login', 'TeamController@postLogin')->name('team.postlogin');
@@ -84,6 +87,7 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
     });
 
     Route::get('{team_slug}/members', 'TeamController@getMembers')->name('teams.members');
+    Route::delete('{team_slug}/member/{id}', 'UserController@destroyUser')->name('member.destroy');
 
     Route::delete('{team_slug}/invite/{hash}', 'InviteController@destroy')->name('invite.destroy');
     Route::get('{team_slug}/invite', 'TeamController@inviteUsers')->name('invite.users');

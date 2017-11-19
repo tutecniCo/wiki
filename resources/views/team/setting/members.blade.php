@@ -46,8 +46,15 @@
                                                 <h4 class="media-heading member-name">
                                                     <a href="#">{{ $member->first_name . ' ' . $member->last_name }}</a>
                                                 </h4>
-                                                <div class="text-muted" style="font-family: lato; font-size: 13px;"><i class="fa fa-envelope-o fa-fw"></i> {{ $member->email }}</div>
+                                                <div class="text-muted" style="font-family: lato; font-size: 13px;">
+                                                    <i class="fa fa-envelope-o fa-fw"></i> {{ $member->email }}
+                                                </div>
                                             </div>
+                                            @if(Auth::user()->id != $member->id)
+                                                <div style="color: #c1c1c1;margin-top: 10px;margin-left: 88%;">
+                                                    <object><a href="{{ route('member.destroy', [$team->slug, $member->id]) }}" data-method="delete" data-confirm="Are you sure?" id="remove-member" data-toggle="tooltip" data-placement="top" title="Remove Member"><i class="fa fa-trash-o fa-fw"></i></a></object>
+                                                </div>
+                                            @endif
                                         </div>
                                     </div>
                                 @endforeach
